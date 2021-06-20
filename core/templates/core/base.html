@@ -9,6 +9,7 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     {% load static %}
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'core/vendor/fontawesome-free-5.15.3-web/css/all.min.css' %}">
     <title>MASTERBIKE</title>
 
 </head>
@@ -28,7 +29,8 @@
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Inicio</a>
                         <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
-                        <a class="nav-link" href="#">Productos</a>
+                        <a class="nav-link" href="{% url 'registro' %}">Registro</a>
+                        <a class="nav-link" href="{% url 'login' %}">Inicio Sesión</a>
                     </div>
                 </div>
             </div>

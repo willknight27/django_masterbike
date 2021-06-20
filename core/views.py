@@ -6,3 +6,9 @@ def home(request):
 
 def contacto(request):
     return render(request,'core/contacto.html')
+
+def login(request):
+    return render(request,'core/login.html')
+
+def registro(request):
+    return render(request,'core/registro.html')

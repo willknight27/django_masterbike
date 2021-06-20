@@ -1,3 +1,11 @@
+:root{
+    --color_fondo: #FEFFDE;
+
+}
+
+body{
+    background-color: var(--color_fondo) ;
+}
 
 
 /*ESTILOS PAGINA PRINCIPAL*/
@@ -9,3 +17,108 @@ nav .link .icono-bike{
 }
 
 
+/****************************************************ESTILOS LOGIN*/
+
+.icon-google{
+    margin-left: 5px;
+    width: 30px;
+    height:auto;
+}
+
+#body_login{
+    background-color: #f4f6ff;
+}
+
+.formulario_login {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    
+    
+}
+
+.formulario__label_login{
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.formulario__grupo-input-login{
+
+    position: relative;
+}
+
+.formulario__input_login{
+    width: 100%;
+    background:#fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 48px 0 10px;
+    transition: .3s ease all;
+
+}
+
+.formulario__input_login:focus {
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163,0.4);
+}
+
+.formulario__input-error-login{
+
+    font-size: 13px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    display: none;
+}
+
+.formulario__input-error-login-activo{
+
+    display: block;
+}
+
+.formulario__validacion-estado-login{
+
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100px;
+    font-size: 16px;
+    opacity: 0;
+}
+
+/*Estilos validacion LOGIN*/
+
+.formulario__grupo-correcto-login
+.formulario__validacion-estado-login{
+
+    color: #1ed12d;
+    opacity:1;
+}
+
+.formulario__grupo-incorrecto-login
+.formulario__label_login{
+
+    color: #bb2929;
+}
+
+.formulario__grupo-incorrecto-login
+.formulario__validacion-estado-login{
+
+    color: #bb2929;
+    opacity: 1;
+}
+
+.formulario__grupo-incorrecto-login
+.formulario__input_login{
+
+    border: 3px solid #bb2929;
+}
+
+.icono_form_login{
+    color: #51c4d3;
+    font-size: 50px;
+}
