@@ -10,7 +10,7 @@
 
     <div class="row mt-3">
 
-      <div class="col-lg-5 col-md-6 col-12">
+      <div class=" col-md-6 col-12 offset-md-3">
         <form action="" class="formulario_login " id="formulario_login">
 
           <div class="formulario__grupo-login " id="grupo__usuario-login">
@@ -40,23 +40,12 @@
         </form>
       </div>
 
-      <div class="col col-md col-lg mx-auto pb-5">
-        <div class="card mt-4">
-          <div class="card-header bg-info text-dark text-center">
-            <span>Iniciar sesión con google <img class="img-fluid icon-google" src="img/google.png"
-                alt="icon_google"></span>
-            </span>
-          </div>
-
-          <div class="card-body m-5">
-            <div class="g-signin2" data-width="300" data-height="50" data-longtitle="true" data-onsuccess="onSignIn">
-            </div>
-          </div>
-        </div>
-
-      </div>
 
     </div>
 </div>
+{% endblock   %}
 
-{% endblock   %}   
+{% block js %}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="{% static 'core/js/login.js' %}"></script>
+{% endblock  %}
