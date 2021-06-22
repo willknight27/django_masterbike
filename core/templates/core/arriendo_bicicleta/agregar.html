@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+{% load crispy_forms_tags %}
+<div class="container mt-2">
+    <h2 id="titulos">Agregar Bicicletas para Arriendo</h2>
+    <br>
+</div>
+
+    <div class="row">
+        <div class="col-12 col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <form action="" method="post">
+
+                        {% csrf_token %}
+                        {{ form | crispy }}
+        
+                        <div class="d-flex mt-4 justify-content-center">
+                            <input type="reset" value="Cancelar" class="btn btn-secondary">
+                            &nbsp;
+                            <input type="submit" value="Guardar" class="btn btn-primary">
+                        </div>
+        
+                    </form>
+                    {{ mensaje }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block contenido %}
+<div class="container mt-2">
+    <h2 id="titulos">Bicicletas en Arriendo</h2>
+    <br>
+</div>
+<div class="container mx-auto">
+    <div class="row mt-3">
+        {% for i in arriendo %}
+        <div class="col-lg-3 col-md-6">
+
+            <div class="card">
+                <div class="card-header bg-info text-light text-center">
+                    <span>{{ i.bicicleta.marca_bicicleta.nombre_marca }}</span>
+                </div>
+
+                <div class="card-body">
+                    {% if i.bicicleta.imagen %}
+                    <img class="img-fluid" src="{{ i.bicicleta.imagen.url }}" alt="imagen-bicicleta">
+                    {% endif %}
+                    <div class="detalle-arriendo mt-2">
+                        <span>Modelo: {{ i.bicicleta.modelo }}</span><br>
+                        <span>Color: {{ i.bicicleta.color }}</span><br>
+                        <span>Aro: {{ i.bicicleta.aro }}</span><br>
+                        <span>Valor Arriendo por dia: ${{ i.precio_dia | intcomma }}</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock  %}

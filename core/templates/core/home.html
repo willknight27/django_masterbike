@@ -1,5 +1,70 @@
 {% extends 'core/base.html' %}
-
+{% load static %}
 {% block contenido %}
-<h3>Pagina de Inicio</h3>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="#"><img src="{% static 'core/img/carrusel1.jpg' %}" class="d-block w-100" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Detalles de nuestros servicios</h3>
+                <p>Haz click en las imagenes para ver los detalles.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <a href="#"><img src="{% static 'core/img/carrusel2.jpg' %}" class="d-block w-100" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Detalles de nuestros servicios</h3>
+                <p>Haz click en las imagenes para ver los detalles.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <a href="#"><img src="{% static 'core/img/carrusel3.jpg' %}" class="d-block w-100" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Detalles de nuestros servicios</h3>
+                <p>Haz click en las imagenes para ver los detalles.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="container mt-2 mx-auto">
+    <h2 id="titulos">Nuestras Bicicletas</h2>
+    <br>
+</div>
+
+<div class="container-fluid mt-2">
+    <div class="row mx-auto">
+        <div class="mb-2 col-lg-4"><img class="img-fluid" src="{% static 'core/img/RUTA.png' %}" alt=""></div>
+        <div class="mb-2 col-lg-4"><img class="img-fluid" src="{% static 'core/img/MTB.png' %}" alt=""></div>
+        <div class="mb-2 col-lg-4"><img class="img-fluid" src="{% static 'core/img/URBANO.png' %}" alt=""></div>
+    </div>
+    <div class=" mt-3 row mx-auto">
+        <div class="mb-2 col-lg-4"><img class="img-fluid" src="{% static 'core/img/INFANTIL.png' %}" alt=""></div>
+        <div class="mb-2 col-lg-4"><img class="img-fluid" src="{% static 'core/img/MUJER.png' %}" alt=""></div>
+        <div class="mb-2 col-lg-4"><img class="img-fluid" src="{% static 'core/img/TRIATLON.png' %}" alt=""></div>
+    </div>
+</div>
+
+<div class="container mt-2 mx-auto">
+    <h2 id="titulos">Nuestros Servicios</h2>
+    <br>
+</div>
+
+
 {% endblock  %}

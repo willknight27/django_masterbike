@@ -29,15 +29,18 @@
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Inicio</a>
                         <a class="nav-link" href="{% url 'contacto' %}">Contacto</a>
+                        <a class="nav-link" href="{% url 'arriendo' %}">Arriendo</a>
                         <a class="nav-link" href="{% url 'registro' %}">Registro</a>
                         <a class="nav-link" href="{% url 'login' %}">Inicio Sesión</a>
+                        <a class="nav-link" href="{% url 'agregar-arriendo' %}">Agregar Arriendo</a>
+
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class ="container mt-2" id='contenido'>
+    <main class ="" id='contenido'>
         {% block contenido %}{% endblock   %}        
     </main>
 
